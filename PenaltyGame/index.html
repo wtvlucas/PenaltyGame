@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Jogo de Penáltis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="hud">
+    <div id="status">Choose a spot</div>
+    <div id="score">Discount: 0%</div>
+  </div>
+
+  <div class="game-container">
+    <img src="assets/field.png" class="field" alt="Field">
+    <img src="assets/keeper_idle.png" id="keeper" class="keeper" alt="GoalKeeper">
+    <img src="assets/ball.png" id="ball" class="ball" alt="Ball">
+
+
+    <div class="target" style="top: 13%; left: 25%;" onclick="shoot('top-left')"></div>
+    <div class="target" style="top: 13%; left: 75%;" onclick="shoot('top-right')"></div>
+    <div class="target" style="top: 25%; left: 50%;" onclick="shoot('center')"></div>
+    <div class="target" style="top: 38%; left: 25%;" onclick="shoot('bottom-left')"></div>
+    <div class="target" style="top: 38%; left: 75%;" onclick="shoot('bottom-right')"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

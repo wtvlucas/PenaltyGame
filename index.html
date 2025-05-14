@@ -1,29 +1,415 @@
 <!DOCTYPE html>
-<html lang="pt">
-<head>
-  <meta charset="UTF-8">
-  <title>Jogo de Penáltis</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="hud">
-    <div id="status">Choose a spot</div>
-    <div id="score">Discount: 0%</div>
-  </div>
+<!-- saved from url=(0042)https://www.fcporto.pt/pt/loja/bilheteira/ -->
+<html lang="pt" amp="" data-react-helmet="lang,amp">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+      <link async="" defer="" rel="stylesheet" type="text/css" href="./assets/buttonStyle.css">
+      <link async="" defer="" rel="stylesheet" type="text/css" href="./assets/fonts.css">
+      <link async="" defer="" rel="stylesheet" type="text/css" href="./assets/styles.css">
+      <link rel="manifest" href="https://www.fcporto.pt/manifest.json">
+      <title>FC Porto - Loja - bilheteira</title>
+      <meta property="fb:app_id" content="510215085792813">
+      <meta property="og:type" content="website">
+      <meta name="description" content="Secção Loja">
+      <meta name="keywords" content="FC Porto, FCP, Revista dragões, Revista fc porto, Revista porto, Dragões, Museu FC Porto">
+      <meta property="og:title" content="FC Porto - Loja">
+      <meta property="og:description" content="Secção Loja">
+      <meta property="og:image" content="https://files.app.fcporto.pt/website/static/images/share/fcporto.jpg">
+      <meta property="og:url" content="https://www.fcporto.pt/pt/loja/bilheteira/">
+      <!--<title>FC Porto</title>-->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1">
+      <meta name="google-site-verification" content="PaXcMBVKdbmdQS3W4-jJjwpkwTnTpzg7pc0B0M-F_P0">
+      <meta name="facebook-domain-verification" content="el2p6akbjhbzki9h0yg54faviyn3j5">
+      <!--<meta name="description" content="O site oficial do FC Porto com as ultimas notícias, jogos, multimedia center, liveStream, live game, destaques dos jogos, perfis dos jogadores, modalidades, área de socio, loja online, bilheteira e muito mais.">
+         <meta name="keywords" content="fcporto, porto">
+         <meta property="og:title" content="FC Porto" />
+         <meta property="og:description" content="O site oficial do FC Porto com as ultimas notícias, jogos, multimedia center, liveStream, live game, destaques dos jogos, perfis dos jogadores, modalidades, área de socio, loja online, bilheteira e muito mais."
+         />
+         <meta property="og:image" content="https://files.app.fcporto.pt/website/static/images/share/fcporto.jpg" />
+         <meta property="og:url" content="https://www.fcporto.pt" />-->
+      <meta property="og:site_name" content="fcporto.pt">
+      <meta property="og:image:width" content="670">
+      <meta property="og:image:height" content="423">
+      <meta property="og:image:type" content="image/jpeg">
+      <link rel="apple-touch-icon" sizes="57x57" href="https://files.app.fcporto.pt/website/static/meta/fcporto_ios_57.jpg">
+      <link rel="apple-touch-icon" sizes="60x60" href="https://files.app.fcporto.pt/website/static/meta/fcporto_ios_60.jpg">
+      <link rel="apple-touch-icon" sizes="72x72" href="https://files.app.fcporto.pt/website/static/meta/fcporto_ios_72.jpg">
+      <link rel="apple-touch-icon" sizes="76x76" href="https://files.app.fcporto.pt/website/static/meta/fcporto_ios_76.jpg">
+      <link rel="apple-touch-icon" sizes="114x114" href="https://files.app.fcporto.pt/website/static/meta/fcporto_ios_114.jpg">
+      <link rel="apple-touch-icon" sizes="120x120" href="https://files.app.fcporto.pt/website/static/meta/fcporto_ios_120.jpg">
+      <link rel="apple-touch-icon" sizes="144x144" href="https://files.app.fcporto.pt/website/static/meta/fcporto_ios_144.jpg">
+      <link rel="apple-touch-icon" sizes="152x152" href="https://files.app.fcporto.pt/website/static/meta/fcporto_ios_152.jpg">
+      <link rel="apple-touch-icon" sizes="180x180" href="https://files.app.fcporto.pt/website/static/meta/fcporto_ios_180.jpg">
+      <link rel="icon" type="image/jpg" sizes="192x192" href="https://files.app.fcporto.pt/website/static/meta/fcporto_android_192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="https://files.app.fcporto.pt/website/static/meta/fcporto_favicon_32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="https://files.app.fcporto.pt/website/static/meta/fcporto_favicon_96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="https://files.app.fcporto.pt/website/static/meta/fcporto_favicon_16.png">
+      <meta name="msapplication-TileImage" content="https://files.app.fcporto.pt/website/static/meta/fcporto_ms_144.jpg">
+      <!-- End Google Analytics -->
+      <meta property="fb:app_id" content="510215085792813" data-react-helmet="true">
+      <meta property="og:type" content="website" data-react-helmet="true">
+      <meta name="description" content="Secção Loja" data-react-helmet="true">
+      <meta name="keywords" content="FC Porto, FCP, Revista dragões, Revista fc porto, Revista porto, Dragões, Museu FC Porto" data-react-helmet="true">
+      <meta property="og:description" content="Secção Loja" data-react-helmet="true">
+      <meta property="og:image" content="https://files.app.fcporto.pt/website/static/images/share/fcporto.jpg" data-react-helmet="true">
+      <meta property="og:url" content="https://www.fcporto.pt/pt/loja/bilheteira/" data-react-helmet="true">
+      <meta property="og:title" content="FC Porto - Loja - bilheteira" data-react-helmet="true">
+      <style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0px;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:'lucida grande', tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+         .fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0px;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:'lucida grande', tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+         .fb_dialog{background:rgba(82,82,82,.7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://connect.facebook.net/rsrc.php/v4/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0px;margin:0px;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://connect.facebook.net/rsrc.php/v4/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:white;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0,0,0,.4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0px 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267b2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:white;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://connect.facebook.net/rsrc.php/v4/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://connect.facebook.net/rsrc.php/v4/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+         .fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+      </style>
+   </head>
+   <body>
+      <div data-reactroot="">
+         <main class="main-container">
+            <!-- react-empty: 4 --><!-- react-empty: 5 -->
+            <div class="sidebar level-00">
+               <div class="logo-wrapper"><a class="logo-link" href="https://www.fcporto.pt/pt"><img class="logo-letters-svg" src="./assets/small_logo.svg"><img class="logo-letters-svg logo-letters-svg-bottom" src="./assets/logo_text.svg"></a></div>
+               <div class="menu-language"><button class="current">PT</button><button class="">EN</button><button class="">ES</button></div>
+               <div class="search-button">
+                  <a title="Pesquisa" class="icon" href="https://www.fcporto.pt/pt/pesquisa">
+                     <span class="menu-search">
+                        <svg class="icon icon-search" width="22" height="22" viewBox="5 5 22 22" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M6.5 15c0-4.687 3.813-8.5 8.5-8.5 4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5-4.687 0-8.5-3.813-8.5-8.5zM27 25.586l-4.258-4.26A9.957 9.957 0 0 0 25 15c0-5.523-4.477-10-10-10S5 9.477 5 15s4.477 10 10 10c2.4 0 4.604-.848 6.327-2.258L25.587 27 27 25.586z" fill="#fff" fill-rule="evenodd"></path>
+                        </svg>
+                     </span>
+                  </a>
+                  <a title="Pesquisa" class="text" href="https://www.fcporto.pt/pt/pesquisa">
+                     <p>Pesquisa</p>
+                  </a>
+               </div>
+               <nav class="menu-transform-items">
+                  <ul class="menu-items">
+                     <li class="menu-item">
+                        <a class="menu-icon">
+                           <svg class="icon icon-club" width="20" height="26" viewBox="5 2 20 26" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M21 10v.96A9.257 9.257 0 0 1 24.25 18c0 5.1-4.15 9.25-9.25 9.25S5.75 23.1 5.75 18A9.257 9.257 0 0 1 9 10.96V10a10 10 0 1 0 16 8 10 10 0 0 0-4-8zM10 23h1v-4h-1v4zm9 0h1v-4h-1v4zm-6 2h1v-4h-1v4zm3 0h1v-4h-1v4zm0-10h2v-2h-2v2zm-4-2h2v-2h-2v2zm-1 2.142c-.005.95-.007 1.475 1.312 1.908 1.343.44 2.214.733 2.66.884.47-.18 1.386-.51 2.756-.896 1.283-.363 1.28-.896 1.273-1.863V10h-8v5.142zM10 15V9h10v6c0 1.026.13 2.398-2 3-2.007.567-3 1-3 1s-.947-.326-3-1c-2.103-.69-2-1.974-2-3zm2.5-12c.36 0 .717.222 1.095.457.43.267.874.543 1.405.543V3c-.246 0-.552-.19-.876-.392C13.664 2.323 13.146 2 12.5 2c-.688 0-1.23.345-1.667.622-.32.203-.596.378-.833.378v1c.528 0 .955-.27 1.37-.534.376-.24.732-.466 1.13-.466zM10 8V5h1v2h2V5h1v2h2V5h1v2h2V4h-3V3h3a1 1 0 0 1 1 1v4H10z" fill="#969199" fill-rule="evenodd"></path>
+                           </svg>
+                        </a>
+                        <a class="menu-text">
+                           <p>Clube</p>
+                        </a>
+                        <div class="childs-icon">
+                           <svg class="icon icon-menu-arrow" width="7" height="11" viewBox="0 0 6.5884 11.025" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1.019 0L0 1.019l4.491 4.438L0 10.006l1.019 1.019 5.569-5.512L1.019 0z" fill="#969199"></path>
+                           </svg>
+                        </div>
+                     </li>
+                     <li class="menu-item">
+                        <a class="menu-icon">
+                           <svg class="icon icon-modalities" width="20" height="26" viewBox="6 2 18 25" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12 24h6v-1h-6v1zm0-18h6V5h-6v1zm11 8h-3.55c-.252-2.247-2.136-4-4.45-4s-4.198 1.753-4.45 4H7V4c0-.55.45-1 1-1h14c.55 0 1 .45 1 1v10zm-11.6 0c.247-1.775 1.76-3.15 3.6-3.15s3.353 1.375 3.6 3.15h-7.2zm7.2 1c-.247 1.775-1.76 3.15-3.6 3.15s-3.353-1.375-3.6-3.15h7.2zM23 25c0 .55-.45 1-1 1H8c-.55 0-1-.45-1-1V15h3.55c.252 2.247 2.136 4 4.45 4s4.198-1.753 4.45-4H23v10zM22 2H8a2 2 0 0 0-2 2v21a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z" fill="#969199" fill-rule="evenodd"></path>
+                           </svg>
+                        </a>
+                        <a class="menu-text">
+                           <p>Futebol</p>
+                        </a>
+                        <div class="childs-icon">
+                           <svg class="icon icon-menu-arrow" width="7" height="11" viewBox="0 0 6.5884 11.025" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1.019 0L0 1.019l4.491 4.438L0 10.006l1.019 1.019 5.569-5.512L1.019 0z" fill="#969199"></path>
+                           </svg>
+                        </div>
+                     </li>
+                     <li class="menu-item">
+                        <a class="menu-icon">
+                           <svg class="icon icon-player" width="12" height="27" viewBox="9 1 12 28" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.375 4.5A2.63 2.63 0 0 0 15 7.125 2.63 2.63 0 0 0 17.625 4.5 2.63 2.63 0 0 0 15 1.875 2.63 2.63 0 0 0 12.375 4.5zm-.875 0a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0zM21 28v1h-1.5c-.932 0-2.062-1.14-2.5-12h1c.03.763.065 1.494.103 2.195C19 18.985 20 17.945 20 13c0-2.746-2.108-3.34-2.755-3.466L15 12.9l-2.245-3.366C12.11 9.66 10 10.25 10 13c0 4.944 1 5.984 1.897 6.195.038-.7.072-1.432.103-2.195h1c-.1 2.47-.235 4.434-.396 6H15v1h-2.508c-.545 4.405-1.32 5-1.992 5H9v-1h1.5c.6 0 1.052-3.026 1.34-7.808C9.88 19.856 9 17.847 9 13c0-4.358 4.263-4.507 4.263-4.507L15 11.1l1.737-2.607S21 8.643 21 13c0 4.847-.877 6.856-2.84 7.192.288 4.782.74 7.808 1.34 7.808H21z" fill="#969199" fill-rule="evenodd"></path>
+                           </svg>
+                        </a>
+                        <a class="menu-text">
+                           <p>Modalidades</p>
+                        </a>
+                        <div class="childs-icon">
+                           <svg class="icon icon-menu-arrow" width="7" height="11" viewBox="0 0 6.5884 11.025" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1.019 0L0 1.019l4.491 4.438L0 10.006l1.019 1.019 5.569-5.512L1.019 0z" fill="#969199"></path>
+                           </svg>
+                        </div>
+                     </li>
+                     <li class="menu-item">
+                        <a class="menu-icon" title="Notícias" href="https://www.fcporto.pt/pt/noticias">
+                           <svg class="icon icon-news" width="20" height="26" viewBox="5 2 20 26" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12 17h4v-7h-4v7zm-1 1h6V9h-6v9zm0 5h12v-1H11v1zM10 6h14V3H10v3zm14 1H10v18.5c0 .565-.183 1.08-.5 1.5h13c.827 0 1.5-.673 1.5-1.5V7zM9 25.5V5H8v20a.5.5 0 0 1-1 0V7H6v18.5c0 .827.673 1.5 1.5 1.5S9 26.327 9 25.5zM25 2v23.5c0 1.378-1.12 2.5-2.5 2.5h-15A2.503 2.503 0 0 1 5 25.5V6h2V4h2V2h16zm-7 16h3v-1h-3v1zm-7 7h5v-1h-5v1zm7-13h5v-1h-5v1zm0-2h5V9h-5v1zm0 6h5v-1h-5v1zm0-2h5v-1h-5v1z" fill="#969199" fill-rule="evenodd"></path>
+                           </svg>
+                        </a>
+                        <a class="menu-text " href="https://www.fcporto.pt/pt/noticias">
+                           <p>Notícias</p>
+                        </a>
+                     </li>
+                     <li class="menu-item">
+                        <a href="https://transparencia.fcporto.pt/" target="_blank" class="menu-icon" title="Transparência">
+                           <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 26" fill="#969199" width="26" height="26" class="icon">
+                              <path d="m8.72,18.27c.41.11.84.18,1.28.18,2.67,0,4.83-2.16,4.83-4.83s-2.16-4.83-4.83-4.83-4.83,2.16-4.83,4.83c0,1.06.34,2.03.91,2.83l-.1.12-3.93,4.86c-.22.29-.34.63-.34.98,0,.5.22.96.61,1.27.3.22.63.34.98.34.5,0,.97-.23,1.27-.63l3.95-4.89.18-.22Zm1.28-8.63c2.19,0,3.98,1.79,3.98,3.98s-1.79,3.98-3.98,3.98c-.5,0-.97-.11-1.42-.29l-.4-.15s-.06-.03-.1-.05c-.32-.18-.6-.39-.84-.62l-.18-.17c-.67-.73-1.04-1.68-1.04-2.7,0-2.19,1.79-3.98,3.98-3.98Zm-6.09,13.23c-.15.19-.37.29-.59.29-.16,0-.32-.05-.46-.15-.19-.15-.29-.37-.29-.6,0-.16.05-.32.15-.45l3.93-4.86c.3.29.64.54,1.01.75.07.04.14.08.22.11l-3.97,4.91Z"></path>
+                              <path d="m17,0H3C1.34,0,0,1.34,0,2v18h1.02V3c0-1.09.89-1.98,1.98-1.98h14c1.09,0,1.98.89,1.98,1.98v21.98H5v1.02h15V3c0-1.66-1.34-3-3-3Z"></path>
+                              <path d="m10,11.51v-.85c-1.63,0-2.96,1.33-2.96,2.96h.85c0-1.17.95-2.11,2.11-2.11Z"></path>
+                           </svg>
+                        </a>
+                        <a href="https://transparencia.fcporto.pt/" target="_blank" class="menu-text">
+                           <p>Transparência</p>
+                        </a>
+                     </li>
+                     <li class="menu-item">
+                        <a class="menu-icon" title="Agenda" href="https://www.fcporto.pt/pt/agenda">
+                           <svg class="icon icon-events" width="20" height="26" viewBox="0 0 20 24" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M19 17V5c0-1.103-.897-2-2-2h-2v2h-1V3h-2v2h-1V3H9v2H8V3H6v2H5V3H3c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h10v-3a3 3 0 0 1 3-3h3zm0 1h-3c-1.103 0-2 .897-2 2v3l5-5zm1-13v13l-6 6H3a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h2V0h1v2h2V0h1v2h2V0h1v2h2V0h1v2h2a3 3 0 0 1 3 3zm-6 4l1 1-7 7-3-3 1-1 2 2 6-6z" fill="#969199" fill-rule="evenodd"></path>
+                           </svg>
+                        </a>
+                        <a class="menu-text " href="https://www.fcporto.pt/pt/agenda">
+                           <p>Agenda</p>
+                        </a>
+                     </li>
+                     <li class="menu-item">
+                        <a href="https://store.fcporto.pt/" target="_blank" class="menu-icon" title="Loja">
+                           <svg class="icon icon-store" width="20" height="26" viewBox="6 2 18 26" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M23 25c0 1.103-.897 2-2 2H9c-1.103 0-2-.897-2-2V11h4v5.5a.5.5 0 0 0 1 0V11h6v5.5a.5.5 0 0 0 1 0V11h4v14zM12 6c0-1.654 1.346-3 3-3s3 1.346 3 3v4h-6V6zm7 4V6a4 4 0 0 0-8 0v4H6v15a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V10h-5z" fill="#969199" fill-rule="evenodd"></path>
+                           </svg>
+                        </a>
+                        <a href="https://store.fcporto.pt/" target="_blank" class="menu-text">
+                           <p>Loja</p>
+                        </a>
+                     </li>
+                     <li class="menu-item current">
+                        <a class="menu-icon" title="Bilhetes" href="https://www.fcporto.pt/pt/loja/bilheteira">
+                           <svg class="icon icon-ticket" width="26" height="26" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M9,14 L12,11 L11,10 L8,13 L9,14 Z M7,12 L12,7 L11,6 L6,11 C5.948,11.052 7,12 7,12 L7,12 Z M12,0 L0,12 L2.003,14.003 C2.194,14.194 2.449,14.297 2.707,14.297 C2.849,14.297 2.992,14.266 3.125,14.201 C3.389,14.072 3.686,14 4,14 C4.162,14 4.328,14.019 4.497,14.06 C5.197,14.228 5.771,14.802 5.94,15.502 C6.06,15.998 5.994,16.474 5.799,16.875 C5.616,17.251 5.701,17.701 5.997,17.997 L8,20 L20,8 L18.045,6.045 C17.837,5.837 17.551,5.71 17.267,5.71 C17.134,5.71 17.001,5.738 16.876,5.798 C16.612,5.928 16.314,6 16,6 C15.838,6 15.672,5.981 15.503,5.94 C14.803,5.772 14.229,5.198 14.06,4.498 C13.94,4.001 14.006,3.525 14.202,3.124 C14.392,2.734 14.261,2.261 13.955,1.955 L12,0 Z M12,1.414 L13.247,2.662 C13.268,2.682 13.28,2.705 13.286,2.72 C12.99,3.347 12.921,4.042 13.088,4.732 C13.345,5.8 14.201,6.655 15.269,6.912 C15.51,6.97 15.756,7 16,7 C16.448,7 16.878,6.904 17.28,6.714 C17.295,6.72 17.318,6.732 17.338,6.752 L18.586,8 L7.995,18.591 L6.698,17.314 C7.008,16.678 7.082,15.97 6.912,15.267 C6.654,14.2 5.798,13.344 4.731,13.088 C4.489,13.029 4.243,13 4,13 C3.54,13 3.098,13.102 2.71,13.296 L1.414,12 L12,1.414 L12,1.414 Z" fill="rgba(255, 255, 255, 0.5)" fill-rule="evenodd" stroke="none"></path>
+                           </svg>
+                        </a>
+                        <a class="menu-text " href="https://www.fcporto.pt/pt/loja/bilheteira">
+                           <p>Bilhetes</p>
+                        </a>
+                     </li>
+                     <li class="menu-item">
+                        <a class="menu-icon">
+                           <svg class="icon icon-associate" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                              <path fill="#969199" d="M24.6,7.8A1.2014,1.2014,0,0,1,25.8,9V21a1.2014,1.2014,0,0,1-1.2,1.2H5.4A1.2014,1.2014,0,0,1,4.2,21V9A1.2014,1.2014,0,0,1,5.4,7.8H24.6m0-1.2H5.4A2.4,2.4,0,0,0,3,9V21a2.4,2.4,0,0,0,2.4,2.4H24.6A2.4,2.4,0,0,0,27,21V9a2.4,2.4,0,0,0-2.4-2.4h0ZM10.2,11.4v2.4H7.8V11.4h2.4m1.2-1.2H6.6V15h4.8V10.2h0Zm12,0H13.8v1.2h9.6V10.2Zm0,8.4H6.6v1.2H23.4V18.6Zm-2.4-6H13.8v1.2H21V12.6Z"></path>
+                           </svg>
+                        </a>
+                        <a class="menu-text">
+                           <p>Sócios</p>
+                        </a>
+                        <div class="childs-icon">
+                           <svg class="icon icon-menu-arrow" width="7" height="11" viewBox="0 0 6.5884 11.025" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1.019 0L0 1.019l4.491 4.438L0 10.006l1.019 1.019 5.569-5.512L1.019 0z" fill="#969199"></path>
+                           </svg>
+                        </div>
+                     </li>
+                     <li class="menu-item">
+                        <a class="menu-icon" title="Museu &amp; Tour" href="https://www.fcporto.pt/pt/museu">
+                           <svg class="icon icon-museum" width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14 1.62L17 12l9.31-.2L19 17l3.272 9.493L14 20.104l-8.172 6.39L9 17l-7.31-5.2L11 12zM14 0a.294.294 0 0 0-.286.208L10.271 11H.301a.3.3 0 0 0-.178.541l7.706 5.837-3.116 10.229A.301.301 0 0 0 5 28a.296.296 0 0 0 .177-.06L14 21.348l8.823 6.592A.296.296 0 0 0 23 28a.301.301 0 0 0 .287-.393l-3.115-10.23 7.706-5.836a.3.3 0 0 0-.179-.541h-9.97L14.286.208A.294.294 0 0 0 14 0zm3 14h-6v1h6v-1zm-1 2h-4v1h4v-1z" fill="#969199"></path>
+                           </svg>
+                        </a>
+                        <a class="menu-text " href="https://www.fcporto.pt/pt/museu">
+                           <p>Museu &amp; Tour</p>
+                        </a>
+                     </li>
+                     <li class="menu-item">
+                        <a class="menu-icon">
+                           <svg class="icon icon-dragon-force" width="20" height="26" viewBox="5 2 21 26" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M17.002 3h1V2h-1v1zm-5 4h1V3h-1v4zm9 0h1V2h-1v5zm0 15h1V10h-1v12zm-13 0h1V10h-1v12zm7-1c-2.205 0-4-1.794-4-4s1.795-4 4-4c2.206 0 4 1.794 4 4s-1.794 4-4 4zm2.973-8h.027v-3h-1v2.422a4.975 4.975 0 0 0-2-.422c-.712 0-1.386.154-2 .422V10h-1v3h.028c-1.224.91-2.028 2.357-2.028 4 0 1.643.804 3.09 2.028 4h-.028v3h1v-2.422a4.983 4.983 0 0 0 2 .422c.713 0 1.387-.154 2-.422V24h1v-3h-.027a4.977 4.977 0 0 0 2.027-4c0-1.643-.803-3.09-2.027-4zm2.755 11.038c-2.915.823-4.82 2.01-5.75 2.697-.918-.63-2.774-1.735-5.666-2.685-3.33-1.093-3.322-2.797-3.313-4.77L6.003 9h18v10.343c.014 1.935.026 3.763-3.272 4.695zM25.002 19V4h-1v4h-6V4h-1v4h-8V2h-1v6h-2V5h-1v14c0 2.053-.207 4.62 4 6 4.105 1.348 6 3 6 3s1.986-1.866 6-3c4.26-1.203 4-3.947 4-6z" fill="#969199" fill-rule="evenodd"></path>
+                           </svg>
+                        </a>
+                        <a class="menu-text">
+                           <p>Dragon Force</p>
+                        </a>
+                        <div class="childs-icon">
+                           <svg class="icon icon-menu-arrow" width="7" height="11" viewBox="0 0 6.5884 11.025" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1.019 0L0 1.019l4.491 4.438L0 10.006l1.019 1.019 5.569-5.512L1.019 0z" fill="#969199"></path>
+                           </svg>
+                        </div>
+                     </li>
+                     <li class="menu-item">
+                        <a class="menu-icon" title="Revista Dragões" href="https://www.fcporto.pt/pt/revista">
+                           <svg class="icon icon-magazine" xmlns="http://www.w3.org/2000/svg" width="26" height="20" viewBox="0 0 26 20">
+                              <path d="M16,0c-1.5,0-2.8,1.1-3.5,2.3C11.8,1.1,10.5,0,9,0H0v18h1v2h24v-2h1V0H16z M1,1.1h8c1.7,0,3,1.3,3,3v14.4 c-0.7-0.8-1.8-1.5-3-1.5H1V1.1z M2,18h7c0.9,0,1.8,0.4,2.5,1H2V18z M24,19H13.5c0.7-0.6,1.6-1,2.5-1h8V19z M25,17h-9 c-1.2,0-2.3,0.7-3,1.5V4.1c0-1.7,1.3-3,3-3h9V17z M15,4h8v1h-8V4z M15,7h8v1h-8V7z M15,10h8v1h-8V10z M15,13h4v1h-4V13z M10,4H3v7h7 V4z M9,10H4V5h5V10z M8,14H3v-1h5V14z" fill="#969199"></path>
+                           </svg>
+                        </a>
+                        <a class="menu-text " href="https://www.fcporto.pt/pt/revista">
+                           <p>Revista Dragões</p>
+                        </a>
+                     </li>
+                     <li class="menu-item">
+                        <a class="menu-icon">
+                           <svg class="icon icon-corporate" width="20" height="26" viewBox="6 1 18 27" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.354 15.354l-.707-.707 2.352-2.354 2 2 4.646-4.646.707.707L15 15.707l-2-2-1.646 1.646zM15 28h1v-7h-1v7zm0-24h1V2h-1v2zM8 19h15V6H8v13zM23 5H8a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h4l-3 8h1l2.666-8h5.668L21 28h1l-3-8h4a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1z" fill="#969199" fill-rule="evenodd"></path>
+                           </svg>
+                        </a>
+                        <a class="menu-text">
+                           <p>Corporate</p>
+                        </a>
+                        <div class="childs-icon">
+                           <svg class="icon icon-menu-arrow" width="7" height="11" viewBox="0 0 6.5884 11.025" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1.019 0L0 1.019l4.491 4.438L0 10.006l1.019 1.019 5.569-5.512L1.019 0z" fill="#969199"></path>
+                           </svg>
+                        </div>
+                     </li>
+                     <li class="menu-item">
+                        <a class="menu-icon" title="Multimédia" href="https://www.fcporto.pt/pt/multimedia">
+                           <svg class="icon icon-videos" width="20" height="26" viewBox="5 7 20 18" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M23 23a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8v-1H7a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-5v-2h-1v5h1v-2h5zM12 11v8l8-4-8-4zm.9 1.456L17.988 15 12.9 17.544v-5.088z" fill="#969199" fill-rule="evenodd"></path>
+                           </svg>
+                        </a>
+                        <a class="menu-text " href="https://www.fcporto.pt/pt/multimedia">
+                           <p>Multimédia</p>
+                        </a>
+                     </li>
+                     <li class="menu-item">
+                        <a class="menu-icon">
+                           <svg class="icon icon-apps" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                              <path fill="#969199" d="M12 25a1 1 0 1 1-1-1 1 1 0 0 1 1 1zm.5-21h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zM27 17.5v2a.5.5 0 0 1-1 0v2.288a2.205 2.205 0 0 1-2 2.19v2.653A1.37 1.37 0 0 1 22.63 28h-3.26a1.368 1.368 0 0 1-1.27-.861A2.988 2.988 0 0 1 16 28H6a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v4.057A1.356 1.356 0 0 1 19.37 9h3.26A1.37 1.37 0 0 1 24 10.37v2.651a2.205 2.205 0 0 1 2 2.191V17.5a.5.5 0 0 1 1 0zm-8-7.13V13h4v-2.63a.37.37 0 0 0-.37-.37h-3.26a.37.37 0 0 0-.37.37zM18 5a2.002 2.002 0 0 0-2-2H6a2.002 2.002 0 0 0-2 2v20a2.002 2.002 0 0 0 2 2h10a2.002 2.002 0 0 0 2-2v-1.021a2.205 2.205 0 0 1-2-2.191v-6.576a2.205 2.205 0 0 1 2-2.19V5zm5 19h-4v2.63a.37.37 0 0 0 .37.37h3.26a.37.37 0 0 0 .37-.37zm2-8.788A1.214 1.214 0 0 0 23.788 14h-5.576A1.214 1.214 0 0 0 17 15.212v6.576A1.214 1.214 0 0 0 18.212 23h5.576A1.214 1.214 0 0 0 25 21.788z"></path>
+                           </svg>
+                        </a>
+                        <a class="menu-text">
+                           <p>Apps</p>
+                        </a>
+                        <div class="childs-icon">
+                           <svg class="icon icon-menu-arrow" width="7" height="11" viewBox="0 0 6.5884 11.025" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1.019 0L0 1.019l4.491 4.438L0 10.006l1.019 1.019 5.569-5.512L1.019 0z" fill="#969199"></path>
+                           </svg>
+                        </div>
+                     </li>
+                     <li class="menu-item">
+                        <a href="https://casas.fcporto.pt/" target="_blank" class="menu-icon" title="Casas">
+                           <svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="1 3 20 26" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" class="icon">
+                              <style type="text/css">
+                                 .st2{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                                 .st3{fill:none;stroke:#969199;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                                 .st4{fill:none;stroke:#969199;stroke-width:0.85;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                              </style>
+                              <g>
+                                 <path class="st1" d="M18.2,25.5h-6.1c-0.3,0-0.5-0.2-0.5-0.5v-4.5H8.3V25c0,0.3-0.2,0.5-0.5,0.5H1.8c-0.3,0-0.5-0.2-0.5-0.5v-8.7 c0-0.1,0.1-0.3,0.2-0.4l8.2-7.5c0.2-0.2,0.5-0.2,0.7,0l8.2,7.5c0.1,0.1,0.2,0.2,0.2,0.4V25C18.7,25.3,18.5,25.5,18.2,25.5z M12.7,24.5h5.1v-8L10,9.4l-7.7,7.1v8h5.1V20c0-0.3,0.2-0.5,0.5-0.5h4.3c0.3,0,0.5,0.2,0.5,0.5V24.5z"></path>
+                              </g>
+                              <g>
+                                 <path class="st1" d="M19.4,15.2c-0.1,0-0.2,0-0.3-0.1L10,6.7l-9.1,8.4c-0.2,0.2-0.5,0.2-0.7,0c-0.2-0.2-0.2-0.5,0-0.7l9.4-8.7 c0.2-0.2,0.5-0.2,0.7,0l9.4,8.7c0.2,0.2,0.2,0.5,0,0.7C19.7,15.1,19.5,15.2,19.4,15.2z"></path>
+                              </g>
+                           </svg>
+                        </a>
+                        <a href="https://casas.fcporto.pt/" target="_blank" class="menu-text">
+                           <p>Casas</p>
+                        </a>
+                     </li>
+                     <li class="menu-item">
+                        <a class="menu-icon" title="Dar Feedback" href="https://www.fcporto.pt/pt/feedback">
+                           <svg class="icon icon-feedback-beta" width="30" height="30">
+                              <path d="M28 10v12h-4V24.586l-2.293-2.293-.293-.293H12V10h16m0-1H12a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h9l4 4v-4h3a1 1 0 0 0 1-1V10a1 1 0 0 0-1-1z" fill="#ee8e31"></path>
+                              <path d="M14 13.5h9v1h-9zM14 15.5h11v1H14zM14 17.5h6v1h-6zM4 6.5h11v1H4zM4 8.5h5v1H4z" fill="#ee8e31"></path>
+                              <path d="M21 3H2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h2v4l4-4h2v-1H7.586l-.293.293L5 16.586V14H2V4h19v4h1V4a1 1 0 0 0-1-1z" fill="#ee8e31"></path>
+                           </svg>
+                        </a>
+                        <a class="menu-text feedback" href="https://www.fcporto.pt/pt/feedback">
+                           <p>Dar Feedback</p>
+                        </a>
+                     </li>
+                  </ul>
+                  <ul class="menu-items submenu-items"></ul>
+               </nav>
+            </div>
+            <div class="topbar">
+               <div class="container">
+                  <div class="topbar-container ">
+                     <a class="logo-link" href="https://www.fcporto.pt/pt"><img src="./assets/small_logo.svg" alt="FCP logo"></a>
+                     <div class="menu-button">
+                        <div id="nav-icon" class="nav-icon"><span></span><span></span><span></span></div>
+                     </div>
+                     <div class="language-selection"><button type="button" class="current">PT</button><button type="button" class="">EN</button><button type="button" class="">ES</button></div>
+                     <div class="topbar-login-center"><button><span>Iniciar Sessão</span></button></div>
+                  </div>
+               </div>
+            </div>
+            <div class="menu-overlay"></div>
+            <div class="body-container">
+               <div class="scroll-container" style="position: relative; overflow: hidden; width: 100%; height: 100%;">
+                  <div style="position: absolute; inset: 0px; overflow: scroll; margin-right: -15px; margin-bottom: -15px;">
+                     <div class="notifications-container">
+                        <div class="notification notification-swap-enter-active">
+                           <div class="notification-body">
+                              <div class="notification-info">
+                                 <h3 class="notification-title">A magia reconhecida 🪄 Rodrigo Mora eleito 𝗠𝗘́𝗗𝗜𝗢 𝗗𝗢 𝗠𝗘̂𝗦 🎩</h3>
+                              </div>
+                              <div class="notification-link"><a href="https://www.fcporto.pt/pt/noticias/20250513-pt-rodrigo-mora-foi-o-medio-do-mes-da-liga">Prémio da Liga</a></div>
+                              <button type="button" name="button-close" class="button-close">
+                                 <svg class="icon icon-close" width="14" height="14" viewBox="8 8 15 14" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 8l-5.999 6L9 8H8v1.001L14.001 15 8 21.001V22h1l6.001-6L21 22h1.001v-.999l-6-6.001 6-5.999V8z" fill="#fff" fill-rule="evenodd"></path>
+                                 </svg>
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="page-animation">
+                        <div class="store-content">
+                           <!-- react-empty: 180 -->
+                           <div>
+                              <div class="store-header-container">
+                                 <div></div>
+                              </div>
+                           </div>
+                           <div class="tabs-content">
+                              <div class="tab-container">
+                                 <div class="tickets">
+                                    <div class="available">
+                                       <h2 class="cell xlg-12">Bilhetes disponíveis</h2>
+                                       <div class="cell xlg-12 ticket">
+                                          <div class="cell xlg-2 md-1 xs-12 date">
+                                             <span>
+                                                <!-- react-text: 268 -->Sáb<!-- /react-text -->
+                                             </span>
+                                             <span>30</span>
+                                             <span>
+                                                <!-- react-text: 271 -->02<!-- /react-text --><!-- react-text: 272 -->/<!-- /react-text --><!-- react-text: 273 -->14<!-- /react-text -->
+                                             </span>
+                                          </div>
+                                          <div class="cell xlg-5 md-6 xs-12 teams">
+                                             <div class="cell xs-4 md-4 home">
+                                                <p class="team-name">FC Porto</p>
+                                                <p class="team-name mobile-only">FC Porto</p>
+                                             </div>
+                                             <p class="cell xs-4 md-2 vs">VS</p>
+                                             <div class="cell xs-4 md-4 visitor">
+                                                <p class="team-name">SL Benfica</p>
+                                             </div>
+                                          </div>
+                                          <div class="cell xlg-3 xs-12 info">
+                                             <ul>
+                                                <li>
+                                                   <!-- react-text: 284 -->Bilhetes a partir de<!-- /react-text --><!-- react-text: 285 --> <!-- /react-text --><!-- react-text: 286 -->10<!-- /react-text --><!-- react-text: 287 --> €<!-- /react-text -->
+                                                </li>
+                                                <li><span>Liga NOS</span></li>
+                                                <li>
+                                                   <span>
+                                                      <!-- react-text: 292 -->18:00<!-- /react-text --><!-- react-text: 293 -->, <!-- /react-text -->
+                                                   </span>
+                                                   <!-- react-text: 294 -->ESTÁDIO DO DRAGÃO<!-- /react-text -->
+                                                </li>
+                                             </ul>
+                                          </div>
+                                          <div class="cell xlg-2 xs-12 button"><button class="buy">Comprar</button></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </main>
+      </div>
 
-  <div class="game-container">
-    <img src="assets/field.png" class="field" alt="Field">
-    <img src="assets/keeper_idle.png" id="keeper" class="keeper" alt="GoalKeeper">
-    <img src="assets/ball.png" id="ball" class="ball" alt="Ball">
+      <div id="modalOverlay" class="modal-overlay">
+        <div class="modal-content">
+            <button id="discountButton" class="discount-button">GANHA DESCONTO</button>
+        </div>
+    </div>
 
+    <div id="gameContainer" class="game-container">
+        <iframe id="gameFrame" class="game-frame" style="display: none;"></iframe>
+    </div>
 
-    <div class="target" style="top: 10%; left: 34%;" onclick="shoot('top-left')"></div>
-    <div class="target" style="top: 10%; left: 62%;" onclick="shoot('top-right')"></div>
-    <div class="target" style="top: 25%; left: 48%;" onclick="shoot('center')"></div>
-    <div class="target" style="top: 32%; left: 34%;" onclick="shoot('bottom-left')"></div>
-    <div class="target" style="top: 32%; left: 62%;" onclick="shoot('bottom-right')"></div>
-  </div>
+    
+    <script src="assets/buttonJS.js"></script>
 
-  <script src="script.js"></script>
-</body>
+   </body>
 </html>
