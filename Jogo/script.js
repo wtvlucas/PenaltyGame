@@ -60,17 +60,21 @@ function shoot(position) {
       const keeperPositions = Object.keys(keeperTarget);
       const keeperPositionName = keeperPositions[randomIndex];
 
-      if (position === keeperPositionName) {
+     
+    if (position === keeperPositionName) {
         statusEl.textContent = "❌ Ohhh! Start again!";
         score = 0;
-      } else {
+    } else {
         score += 10;
         statusEl.textContent = "✅ Goal!";
-        if (score >= 100) {
-          statusEl.textContent = "🎉 You got the some item for free!";
+        if (score >= 100) { 
+           
+            document.getElementById('reward-overlay').style.display = 'flex';
+            window.parent.postMessage('gameComplete', '*');
         }
-      }
-      scoreEl.textContent = `Score: ${score}%`;
+    }
+
+      scoreEl.textContent = `Discount: ${score}%`;
 
     
       setTimeout(() => {
